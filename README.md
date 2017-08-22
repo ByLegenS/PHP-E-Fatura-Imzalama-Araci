@@ -36,7 +36,7 @@ PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
 	$dizin = (__DIR__ . DIRECTORY_SEPARATOR);
 	$java_dosyasi=$dizin."Java/NTGEFaturaImza.jar";
 	$fatura_dosyasi='TemelFaturaOrnegi.xml';
-  $pin = '123456';
+ 	$pin = '123456';
 
 	$cikti = Imzala($java_dosyasi, $fatura_dosyasi, $pin);
 
