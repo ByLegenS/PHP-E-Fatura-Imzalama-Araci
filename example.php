@@ -6,7 +6,7 @@
 		/* Java Dosyasına Veri Yollanıyor */
 		if($pin != null)
 		{	
-			exec("java -Dfile.encoding=UTF8 -jar ".$java_dosyasi." {".$fatura_dosyasi.",".$pin.",".$seriImza.",".$dosyayaKaydet."} 2>&1", $cikti);
+			exec("java -Dfile.encoding=UTF8 -jar $java_dosyasi {$fatura_dosyasi,$pin,$seriImza,$dosyayaKaydet} 2>&1", $cikti);
 			
 			$sonuc = $cikti;
 			
