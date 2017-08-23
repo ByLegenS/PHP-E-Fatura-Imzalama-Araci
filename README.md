@@ -46,4 +46,4 @@ PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
 ?&gt;
 </pre>
 
-Açıklamalar : http://yucelkahraman.com.tr/php/php-icin-e-fatura-imzalama-araci.html
+Açıklamalar : http://yucelkahraman.com.tr/php-icin-e-fatura-imzalama-araci.html
