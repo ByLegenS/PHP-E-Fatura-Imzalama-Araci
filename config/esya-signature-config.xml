@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-signature-config xmlns="http://uekae.tubitak.gov.tr/xml/signature#">
+
+    <locale language="tr" country="TR"/>
+
+    <http>
+        <proxy-host></proxy-host>
+        <proxy-port></proxy-port>
+        <proxy-username></proxy-username>
+        <proxy-password></proxy-password>
+        <basic-authentication-username></basic-authentication-username>
+        <basic-authentication-password></basic-authentication-password>
+        <connection-timeout-in-milliseconds>2000</connection-timeout-in-milliseconds>
+    </http>
+
+    <!--
+    URI resolve
+    IdResolver, DOMResolver, HttpResolver, XPointerResolver, FileResolver;
+    -->
+    <resolvers>
+        <resolver class="tr.gov.tubitak.uekae.esya.api.xmlsignature.resolver.IdResolver"/>
+        <resolver class="tr.gov.tubitak.uekae.esya.api.xmlsignature.resolver.DOMResolver"/>
+        <resolver class="tr.gov.tubitak.uekae.esya.api.xmlsignature.resolver.XPointerResolver"/>
+        <resolver class="tr.gov.tubitak.uekae.esya.api.xmlsignature.resolver.FileResolver"/>
+        <resolver class="tr.gov.tubitak.uekae.esya.api.xmlsignature.resolver.HttpResolver"/>
+    </resolvers>
+
+    <timestamp-server>
+        <host>http://tzd.kamusm.gov.tr</host>
+        <digest-alg>SHA-256</digest-alg>
+        <!-- leave below settings blank, if not ESYA Timestamp Server! -->
+		<!-- for test timestamp account mail to bilgi@kamusm.gov.tr  -->
+        <userid>user_id</userid>
+        <password>password</password>
+    </timestamp-server>
+
+    <algorithms>
+        <digest-alg>SHA-256</digest-alg>
+        <signature-alg>RSA-with-SHA256</signature-alg>
+        <ocsp-digest-algorithm>SHA-256</ocsp-digest-algorithm>
+    </algorithms>
+
+    <certificate-validation>
+        <!--
+             different policies according to certificate type is possible, and defined by 'for' attribute
+             lack of 'for' attribute means -default- certificate validation policy,
+             if any specific policy not found for certain certificate type, default policy is used.
+             possible certificate types include {QualifiedCertificate, MaliMuhurCertificate, TimeStampingCertificate}
+             NOTE THAT ALL THE CERTIFICATES IN SAME CERTIFICATE CHAIN are VALIDATED WITH SAME POLICY
+         -->		
+        <certificate-validation-policy-file>config/certval-policy-test.xml</certificate-validation-policy-file>
+		<certificate-validation-policy-file for="MaliMuhurCertificate">config/certval-policy-malimuhur.xml</certificate-validation-policy-file>
+
+        <!-- 0 means ignore grace -->
+        <grace-period-in-seconds>0</grace-period-in-seconds>
+
+        <!-- *100 for tests! -->
+        <last-revocation-period-in-seconds>17280000</last-revocation-period-in-seconds>
+
+        <!-- validation data must be published after creation ifs set true, requires grace period for signers -->
+        <use-validation-data-published-after-creation>false</use-validation-data-published-after-creation>
+
+        <validate-certificate-before-signing>false</validate-certificate-before-signing>
+
+    </certificate-validation>
+
+    <params>
+        <!-- loosening below 2 settings will cause warnings instead of validation failure -->
+        <!-- referenced validation data must be used for cert validation is set true -->
+        <force-strict-reference-use>true</force-strict-reference-use>
+
+
+        <!-- compare resolved policy with policy uri if indicated -->
+        <check-policy-uri>false</check-policy-uri>
+
+        <validate-timestamp-while-signing>false</validate-timestamp-while-signing>
+
+        <!-- if there is a signing time in the signature, decide if you want to trust -->
+        <trust-signing-time>false</trust-signing-time>
+
+        <!-- for debug purposes! -->
+        <write-referencedvalidationdata-to-file-on-upgrade>false</write-referencedvalidationdata-to-file-on-upgrade>
+        <!-- for CAdES signature format, use (deprecated) archive timestamp v2 when creating ESA type signature -->
+        <use-CAdES-Archive-TimeStamp-V2>false</use-CAdES-Archive-TimeStamp-V2>
+    </params>
+
+</xml-signature-config>
