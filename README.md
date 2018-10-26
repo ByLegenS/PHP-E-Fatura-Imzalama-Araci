@@ -34,7 +34,7 @@ PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
 	
 	/* Smart Kart Fatura İmzalama */   $dizin=(__DIR__ . DIRECTORY_SEPARATOR);  $java_dosyasi=$dizin."Java/NTGEFaturaImza.jar";  
 	$fatura_dosyasi='TemelFaturaOrnegi.xml';  
-	$pin='214214';   
+	$pin='123456';   
 	$cikti=Imzala($java_dosyasi,$fatura_dosyasi,$pin);   
 	
 	if($cikti==true)
