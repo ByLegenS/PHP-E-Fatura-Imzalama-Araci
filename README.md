@@ -1,20 +1,13 @@
 # PHP ile GİB EFatura İmzalama
 
 Özellikleri:
+	-Java Kütüphanesi kullanarak GİB EFatura imzalar.
+	-PHP exec fonksiyonunun açık olması gerekmektedir.
+	-Bilgisayarda Java yüklü olması gerekmektedir.
 
-1)Algoritma ile TC Kimlik No ve Yabancı Kimlik No doğruluk kontrolü yapar,
 
-2)Nüfus ve Vatandaşlık İşleri Genel Müdürlüğü ile 
--TC Kimlik No, 
--Yabancı Kimlik No,
--Nüfus Cüzdanı,
--Yeni Kimlik Kartı doğruluk kontrolü yapar,
-
-3)PHP Curl ve Soap bağlantısını destekler,
-
-4)PHP Curl ve Soap aktif değilse sadece Algoritma ile doğruluk kontrolü yapar.
-
-Geliştirici: Murat KARAGÖZ (murat.karagoz@hotmail.com.tr)
+Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
+             https://github.com/3zRasasi/PHP-E-Fatura-Imzalama-Araci
 
 ## Kullanım
 ```php
@@ -57,7 +50,7 @@ Geliştirici: Murat KARAGÖZ (murat.karagoz@hotmail.com.tr)
  ``` 
 
 ### Lisans
-Creative Commons Atıf-GayriTicari-Türetilemez 4.0 Uluslararası Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın.  (Orjinali: https://github.com/3zRasasi/PHP-E-Fatura-Imzalama-Araci )
+GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın. 
 
 
 
