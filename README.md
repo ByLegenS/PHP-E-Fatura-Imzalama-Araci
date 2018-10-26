@@ -1,7 +1,8 @@
-# PHP E-Fatura İmzalama
+# PHP ile GİB EFatura İmzalama
 =============================================
 
-PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
+
+
 
 ---------------------------------------------
 
@@ -48,3 +49,5 @@ PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
 ?&gt;
 </pre>
 
+
+(Orjinali: https://github.com/3zRasasi/PHP-E-Fatura-Imzalama-Araci )
