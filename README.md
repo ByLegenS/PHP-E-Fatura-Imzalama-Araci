@@ -1,7 +1,10 @@
 # PHP ile GİB EFatura İmzalama
 
 Özellikleri:
-Java Kütüphanesi kullanarak GİB EFatura imzalar.PHP exec fonksiyonunun açık olması gerekmektedir.Bilgisayarda Java yüklü olması gerekmektedir.Mali Mühür Sertifikası gereklidir.
+Java Kütüphanesi kullanarak GİB EFatura imzalar.<br>
+PHP exec fonksiyonunun açık olması gerekmektedir.<br>
+Bilgisayarda Java yüklü olması gerekmektedir.<br>
+Mali Mühür Sertifikası gereklidir.<br>
 
 
 Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
@@ -69,7 +72,7 @@ Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
 	}
 
  ``` 
-###Mali Mühür Test Sertifikaları
+###Mali Mühür Test Sertifikaları <br>
 https://test.efatura.gov.tr/efatura/Mali_muhur_deneme_sertifika.zip
 
 
