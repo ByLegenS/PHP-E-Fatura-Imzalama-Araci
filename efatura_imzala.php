@@ -6,7 +6,7 @@
 
 
 
-    //Dosya ayarları
+        //Dosya ayarları
 	$dizin=(__DIR__ . DIRECTORY_SEPARATOR);  
 	$java_dosyasi=$dizin."Java\NTGEFaturaImza.jar";  
 	$fatura_dosyasi=$dizin."TemelFaturaOrnegi.xml"; 
@@ -17,7 +17,7 @@
 	//Seri imza olsun mu?
 	$seriImza="hayır";
 	
-    //Dosyaya kaydetsin mi?
+       //Dosyaya kaydetsin mi?
 	$dosyayaKaydet="evet";
 
 
