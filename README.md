@@ -1,6 +1,6 @@
 # PHP ile GİB EFatura İmzalama
 
-Özellikleri:
+Özellikleri:<br>
 Java Kütüphanesi kullanarak GİB EFatura imzalar.<br>
 PHP exec fonksiyonunun açık olması gerekmektedir.<br>
 Bilgisayarda Java yüklü olması gerekmektedir.<br>
