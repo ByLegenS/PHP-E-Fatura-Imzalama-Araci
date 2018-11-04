@@ -8,7 +8,7 @@
 	$fatura_dosyasi=$dizin."TemelFaturaOrnegi.xml"; 
 	
 	//Akıllı Kart şifresi
-	$pin='214214';  
+	$pin='123456';  
 	
 	//Seri imza olsun mu?
 	$seriImza="hayır";
