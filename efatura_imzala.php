@@ -8,18 +8,30 @@
 	$fatura_dosyasi=$dizin."TemelFaturaOrnegi.xml"; 
 	
 	//Akıllı Kart şifresi
-	$pin='123456';  
+	$pin='214214';  
 	
 	//Seri imza olsun mu?
 	$seriImza="hayır";
 	
-    //Dosyaya kaydetsin mi?
+         //Dosyaya kaydetsin mi?
 	$dosyayaKaydet="evet";
+
+	
+        //bir array içerisinde aranan var mı yok mu kontrol et
+	function DizideVarMi($aranan, array $dizi)
+	{
+			foreach ($dizi as $anahtar => $deger) 
+			{
+				if (false !== stripos($deger, $aranan)) 
+				{
+				return true;
+				}
+			}
+           return false;
+	}
 	
 	
-
-
-	/* Smart Kart Fatura İmzalama */  
+	/* Akıllı Kart Fatura İmzalama */  
 	function Imzala($java_dosyasi,$fatura_dosyasi,$pin=null,$seriImza,$dosyayaKaydet)  
 	{  
 	
@@ -33,37 +45,36 @@
 		{ 
 				$java_komutu= $java_dosyasi." {".$fatura_dosyasi.",".$pin.",".$seriImza.",".$dosyayaKaydet."}";
 				exec("java -Dfile.encoding=UTF8 -jar ".$java_komutu." 2>&1",$cikti);    
-				$sonuc=$cikti;  
 				
-				foreach($cikti AS $ciktiDeger)  
-				{  
 	
 						//işlem başarılı mı kontrol et
-						if(strstr($ciktiDeger,'İmzalandı...')==true)  
+						if( DizideVarMi("İmzalandı",$cikti)==true)  
 						{  
-								$islem_sonucu=true;  break;  
+								$islem_sonucu="İmzalandı";   
+						}
+						elseif( DizideVarMi("Hatalı PIN",$cikti)==true)  
+						{  
+								$islem_sonucu="Hatalı PIN";   
+						}
+						elseif( DizideVarMi("PIN kilitli",$cikti)==true)  
+						{  
+								$islem_sonucu="PIN Kodu bloke oldu.PUK Kodunu giriniz.";  
 						}
 						else
-						{
-								$islem_sonucu=false;  break; 
+						{  
+								$islem_sonucu="PUK Kodu bloke oldu";  break;
 						}						
-				}   
+					
+				  
 						return $islem_sonucu;  //işlem sonucunu göster
 		}  
 	}  
 	
 	
 	
-	    $islem_sonucu = Imzala($java_dosyasi, $fatura_dosyasi, $pin, $seriImza, $dosyayaKaydet);
-
 	
-		if($islem_sonucu==true)
-			{
-				echo "İmzalandı..."; 
-			}		
-		else 
-			{
-				echo "Hata Oluştu...";
-			}
+	            $islem_sonucu = Imzala($java_dosyasi, $fatura_dosyasi, $pin, $seriImza, $dosyayaKaydet);
+		    echo $islem_sonucu;
+		
 	
 ?>
