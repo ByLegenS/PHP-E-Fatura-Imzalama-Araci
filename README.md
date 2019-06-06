@@ -94,6 +94,10 @@ Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
 ### Mali Mühür Test Sertifikaları <br>
 https://test.efatura.gov.tr/efatura/Mali_muhur_deneme_sertifika.zip
 
+Not: Test Mali Mühür Sertifikalarını "ACS 38T USB - Beyaz" cihazınıza yükleyebilirsiniz. 
+Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından silmek için;
+certutil -delkey -csp “Microsoft Smart Card Key Storage Provider” “473166-testkisi01@test.com.tr”
+komutunu girin. Hatalı komutlarınızdan dolayı e-imzanız silinebilir. Sorumluluk size ait.
 
 #### Lisans
 GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın. 
