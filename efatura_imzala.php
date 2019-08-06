@@ -48,7 +48,11 @@
 				
 	
 						//işlem başarılı mı kontrol et
-						if( DizideVarMi("İmzalandı",$cikti)==true)  
+					        if( DizideVarMi("'java'",$cikti)==true and DizideVarMi("komut",$cikti)==true and DizideVarMi("program ya da toplu",$cikti)==true and DizideVarMi("olarak",$cikti)==true )   //Array ( [0] => 'java' i� ya da d�� komut, �al��t�r�labilir [1] => program ya da toplu i� dosyas� olarak tan�nm�yor. )
+						{  
+								$islem_sonucu="Java yuklu degil";   
+						}
+						elseif( DizideVarMi("İmzalandı",$cikti)==true)  
 						{  
 								$islem_sonucu="İmzalandı";   
 						}
