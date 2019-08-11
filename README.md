@@ -100,10 +100,10 @@ Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından si
 komutunu girin. Hatalı komutlarınızdan dolayı e-imzanız silinebilir. Sorumluluk size ait.
 
 AKİS Akıllı kartından sertifika silmek için: 
--Windows user home dizini altına ekte  "akia.ini"dosyayı koyunuz (örneğin C:\Users\Murat\akia.ini) 
--Akis İzleme Aracı'nı çalıştırınız, 
--Akıllı kartınıza giriş yapınız, 
--Silmek istediğiniz sertifikayı seçip yukarıda aktif hale gelen silme butonuna tıklayınız.
+-Windows user home dizini altına ekte  "akia.ini"dosyayı koyunuz (örneğin C:\Users\Murat\akia.ini) <br>
+-Akis İzleme Aracı'nı çalıştırınız, <br>
+-Akıllı kartınıza giriş yapınız, <br>
+-Silmek istediğiniz sertifikayı seçip yukarıda aktif hale gelen silme butonuna tıklayınız.<br>
 
 #### Lisans
 GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın. 
