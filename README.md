@@ -92,7 +92,7 @@ Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
 
  ``` 
 ### Mali Mühür Test Sertifikaları <br>
-https://test.efatura.gov.tr/efatura/Mali_muhur_deneme_sertifika.zip
+http://www.kamusm.gov.tr/BilgiDeposu/Test/SHA256/MM/937701-testkurum01@test.com.tr.pfx
 
 Not: Test Mali Mühür Sertifikalarını "ACS 38T USB - Beyaz" cihazınıza yükleyebilirsiniz. 
 Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından silmek için;
