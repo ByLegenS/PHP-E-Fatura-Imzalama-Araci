@@ -96,7 +96,7 @@ http://www.kamusm.gov.tr/BilgiDeposu/Test/SHA256/MM/937701-testkurum01@test.com.
 
 Not: Test Mali Mühür Sertifikalarını "ACS 38T USB - Beyaz" cihazınıza yükleyebilirsiniz. 
 Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından silmek için;
-<code> certutil -delkey -csp “Microsoft Smart Card Key Storage Provider” “473166-testkisi01@test.com.tr” </code>
+<code> certutil -delkey -csp “Microsoft Smart Card Key Storage Provider” “937701-testkurum01@test.com.tr” </code>
 komutunu girin.
 
 AKİS Akıllı kartından sertifika silmek için: <br>
