@@ -99,6 +99,12 @@ Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından si
 <code> certutil -delkey -csp “Microsoft Smart Card Key Storage Provider” “473166-testkisi01@test.com.tr” </code>
 komutunu girin. Hatalı komutlarınızdan dolayı e-imzanız silinebilir. Sorumluluk size ait.
 
+AKİS Akıllı kartından sertifika silmek için: 
+-Windows user home dizini altına ekte  "akia.ini"dosyayı koyunuz (örneğin C:\Users\Murat\akia.ini) 
+-Akis İzleme Aracı'nı çalıştırınız, 
+-Akıllı kartınıza giriş yapınız, 
+-Silmek istediğiniz sertifikayı seçip yukarıda aktif hale gelen silme butonuna tıklayınız.
+
 #### Lisans
 GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın. 
 
