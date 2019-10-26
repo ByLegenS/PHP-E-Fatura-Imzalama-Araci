@@ -1,18 +1,4 @@
-# PHP ile GİB EFatura İmzalama
-
-Özellikleri:<br>
-Java Kütüphanesi kullanarak GİB EFatura imzalar.<br>
-PHP exec fonksiyonunun açık olması gerekmektedir.<br>
-Bilgisayarda Java yüklü olması gerekmektedir.<br>
-Mali Mühür Sertifikası gereklidir.<br>
-
-
-Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
-             https://github.com/3zRasasi/PHP-E-Fatura-Imzalama-Araci
-
-## Kullanım
-```php
-
+<?php 
 //Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr) https://github.com/3zRasasi/PHP-E-Fatura-Imzalama-Araci
 //GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın.
 
@@ -62,7 +48,11 @@ Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
 				
 	
 						//işlem başarılı mı kontrol et
-						if( DizideVarMi("İmzalandı",$cikti)==true)  
+					        if( DizideVarMi("'java'",$cikti)==true and DizideVarMi("komut",$cikti)==true and DizideVarMi("program ya da toplu",$cikti)==true and DizideVarMi("olarak",$cikti)==true )   //Array ( [0] => 'java' i� ya da d�� komut, �al��t�r�labilir [1] => program ya da toplu i� dosyas� olarak tan�nm�yor. )
+						{  
+								$islem_sonucu="Java yuklu degil";   
+						}
+						elseif( DizideVarMi("İmzalandı",$cikti)==true)  
 						{  
 								$islem_sonucu="İmzalandı";   
 						}
@@ -89,28 +79,6 @@ Geliştirici: Yücel Kahraman (http://yucelkahraman.com.tr)
 	
 	            $islem_sonucu = Imzala($java_dosyasi, $fatura_dosyasi, $pin, $seriImza, $dosyayaKaydet);
 		    echo $islem_sonucu;
-
- ``` 
-### Mali Mühür Test Sertifikaları <br>
-http://www.kamusm.gov.tr/BilgiDeposu/Test/SHA256/MM/937701-testkurum01@test.com.tr.pfx
-
-Not: Test Mali Mühür Sertifikalarını "ACS 38T USB - Beyaz" cihazınıza yükleyebilirsiniz. 
-Yüklenen Test Mali Mühür Sertifikasını "ACS 38T USB - Beyaz" cihazından silmek için;
-<code> certutil -delkey -csp “Microsoft Smart Card Key Storage Provider” “937701-testkurum01@test.com.tr” </code>
-komutunu girin.
-
-AKİS Akıllı kartından sertifika silmek için: <br>
--Windows user home dizini altına ekte  "<a href="https://github.com/muratkaragoz/php_efatura_imzalama/blob/master/akia.ini">akia.ini</a>"dosyayı koyunuz (örneğin C:\Users\Murat\akia.ini) <br>
--Akis İzleme Aracı'nı çalıştırınız, <br>
--Akıllı kartınıza giriş yapınız, <br>
--Silmek istediğiniz sertifikayı seçip yukarıda aktif hale gelen silme butonuna tıklayınız.<br>
-
-Hatalı komutlarınızdan dolayı e-imzanız silinebilir. Sorumluluk size ait.
-
-#### Lisans
-GPLv3 Genel Kamu Lisansı ile lisanslanmıştır. Detaylar için LİSANS dosyasına bakın. 
-
-
-
-
-
+		
+	
+?>
