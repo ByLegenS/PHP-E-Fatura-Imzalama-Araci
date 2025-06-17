@@ -45,5 +45,3 @@ PHP İçin Java İle Hazırlanmış E-Fatura İmzalama Aracı
 	else echo 'Hata Oluştu...';
 ?&gt;
 </pre>
-
-Açıklamalar : http://yucelkahraman.com.tr/php-icin-e-fatura-imzalama-araci.html
